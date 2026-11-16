@@ -274,8 +274,7 @@ private fun DuplicatesScreen(analysis: Analysis) {
                         val account = item.account()?.name ?: "بدون حساب مصنف"
                         val suggested = item in duplicate.sugg
                         Text(
-                            "${if (suggested) "⚠️ مرشح للمراجعة" else "• نسخة"} $account
-${item.path()}",
+                            "${if (suggested) "⚠️ مرشح للمراجعة" else "• نسخة"} $account\n${item.path()}",
                             style = MaterialTheme.typography.bodySmall
                         )
                     }
